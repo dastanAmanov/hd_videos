@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #334;
+            font-family: sans-serif;
+        }
+        .video-title{
+            background-color: #334;
+            color: #fff;
+            width: 100%;
+            padding: 20px;
+            font-size: 42px;
+            position: fixed;
+            z-index: 2;
+        }
+        .list{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 100px;
+        }
+        .list-item{
+            
+            margin: auto;
+        }
+        .video-pleyer{
+            width: 600px;
+            max-width: 95%;
+            height: 380px;
+            border-radius: 10px;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+        .video-tag{
+            padding: 15px;
+            margin-left: 10px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            display: inline-block;
+        }
+        @media only screen and (max-width: 480px){
+            .video-pleyer{
+                height: 220px;
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="video-title">HD Videos</h1>
+    
+    <ul class="list"></ul>
+    <template id="template">
+        <li class="list-item">
+            <video class="video-pleyer" src="" id="add-data" controls>
+                <source src="" type="video/mp4"> 
+            </video>
+            <div class="info-video">
+                <p class="video-tag"></p>
+            </div>
+        </li>
+    </template>
+
+   <script src="./index.js"></script> 
+</body>
+</html>
