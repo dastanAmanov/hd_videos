@@ -3,7 +3,6 @@ let elInput = document.querySelector("#input-search")
 let list = document.querySelector(".list")
 let template = document.querySelector("#template").content;
 
-
 elForm.addEventListener('submit', e =>{
      e.preventDefault()
      list.innerHTML = null;
@@ -19,15 +18,10 @@ async function fetchdata(){
             cloneTemplate.querySelector("#add-data").setAttribute("src", url)
             cloneTemplate.querySelector(".video-tag").textContent = tags
             
-            if(elInput.value == null){
-                
-            }
-
             list.appendChild(cloneTemplate)
         });
     }
     renderVideos(data.hits)
-
 }
 fetchdata()
 
