@@ -5,9 +5,9 @@ let template = document.querySelector("#template").content;
 
 elForm.addEventListener('submit', e =>{
      e.preventDefault()
-     list.innerHTML = null;
+     list.innerHTML = null;;
 async function fetchdata(){
-    const response = await fetch(`https://pixabay.com/api/videos/?key=23037258-af0f917717571caabf69b3a7f&lang=ru&q=${elInput.value}`);
+    const response = await fetch(`https://pixabay.com/api/videos/?key=23037258-af0f917717571caabf69b3a7f&lang=ru&q=${elInput.value}&page=1`);
     const data = await response.json();
     console.log(data);
     renderVideos = (dataApi)=>{
@@ -17,7 +17,7 @@ async function fetchdata(){
             let cloneTemplate = template.cloneNode(true)
             cloneTemplate.querySelector("#add-data").setAttribute("src", url)
             cloneTemplate.querySelector(".video-tag").textContent = tags
-            
+        
             list.appendChild(cloneTemplate)
         });
     }

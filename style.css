@@ -61,4 +61,16 @@ form{
         height: 220px;
         margin-left: 10px;
     }
+    .video-title{
+        font-size: 28px;
+        left: 0px;
+    }
+    .input-seach{
+        width: 170px;
+        margin-left: 200px;
+        padding: 5px 0px;
+    }
+    .input-seach::placeholder{
+        font-size: 18px;
+    }
 }
