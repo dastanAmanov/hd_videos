@@ -8,10 +8,36 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 class="video-title">HD Videos</h1>
+    <div class="row">
+        <h1 class="head-title">HD Videolar</h1>
     <form id="form">
-        <input type="search" id="input-search" class="input-seach" placeholder="Поиск" autocomplete="off">
+        <input type="search" id="input-search" class="input-seach" placeholder="Matin kiriting" autocomplete="off">
+        <button type="submit" class="btn-search">Qidirish</button>
     </form>
+    <select id="select">
+        <option value="all">Hammasi</option>
+        <option value="backgrounds">Orqa fonlar</option>
+        <option value="fashion">Moda</option>
+        <option value="science">Fan</option>
+        <option value="health">Sog'liq</option>
+        <option value="religion">Din</option>
+        <option value="transportation">Transport</option>
+        <option value="buildings">Binolar</option>
+        <option value="industry">Sanoat</option>
+        <option value="feelings">His-tuyg'ular</option>
+        <option value="places">Joylar</option>
+        <option value="nature">Tabiat</option>
+        <option value="education">Talim</option>
+        <option value="computer">Kompyter</option>
+        <option value="food">Ovqat</option>
+        <option value="sports">Sport turlari</option>
+        <option value="travel">Sayohat</option>
+        <option value="business">Biznes</option>
+        <option value="music">Musiqa</option>
+        <option value="animals">Hayvonot</option>
+        <option value="people">Insonlar</option>
+    </select>
+    </div>
     <ul class="list"></ul>
     <template id="template">
         <li class="list-item">
