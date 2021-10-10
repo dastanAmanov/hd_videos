@@ -6,28 +6,36 @@ body{
     background-color: #334;
     font-family: sans-serif;
 }
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
 .row{
-    width: 100%;
+    max-width: 1300px;
     background-color: #334;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 3;
 }
 
-#select{
+.row #select{
     background-color: #fff;
     border: none;
     outline: none;
     appearance: none;
     padding: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     border-radius: 5px;
     overflow-wrap: auto;
 }
-.input-seach{
+.row .input-seach{
     border: none;
     border-bottom: 2px solid #fff;
     outline: none;
@@ -37,21 +45,21 @@ body{
     padding: 10px;
     background-color: transparent;
 }
-.btn-search{
+.row .btn-search{
     border: none;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    padding: 12px 0;
+    padding: 12px 8px;
     border-radius: 5px;
 }
-.btn-search:hover{
+.row .btn-search:hover{
     background-color: #ccc;
     color: #334;
 }
-.head-title{
+.row .head-title{
     background-color: #334;
     color: #eeff00;
     padding: 20px;
@@ -82,6 +90,48 @@ body{
     color: #fff;
     display: inline-block;
 }
+.btn-block{
+    display: flex;
+    justify-content: center;
+}
+#btn-next, 
+#btn-prev{
+    border: 1px solid #fff;
+    padding: 0 20px;
+    margin: 0 10px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 900;
+}
+@media only screen and (min-width:614px) and (max-width: 787px){
+    .row .head-title{
+        font-size: 24px;
+    }
+    .row #select{
+        font-size: 16px;
+    }
+    .row .input-seach{
+        width: 200px;
+    }
+}
+@media only screen and (min-width:481px) and (max-width: 613px){
+    .row .head-title{
+        font-size: 18px;
+    }
+    .row #select{
+        padding: 10px;
+        font-size: 14px;
+    }
+    .row .input-seach{
+        font-size: 16px;
+        width: 160px;
+    }
+    .row .btn-search{
+        font-size: 14px;
+    }
+}
 @media only screen and (max-width: 480px){
     .video-pleyer{
         height: 220px;
@@ -92,18 +142,26 @@ body{
         left: 0px;
     }
     .row{
+        width: 100%;
         flex-wrap: wrap;
+        padding-bottom: 10px;
     }
-    .head-title{
+    .row .head-title{
         width: 100%;
         font-size: 18px;
     }
-    .input-seach{
-        width: 170px;
-        /* margin-left: 200px; */
+    .row #select{
+        font-size: 12px;
+    }
+    .row .input-seach{
+        max-width: 160px;
         padding: 5px 0px;
     }
-    .input-seach::placeholder{
-        font-size: 18px;
+    .row .input-seach::placeholder{
+        font-size: 16px;
+    }
+    #btn-next, 
+    #btn-prev{
+        font-size: 22px;
     }
 }

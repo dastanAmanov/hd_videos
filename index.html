@@ -5,50 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full hd videos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="row">
-        <h1 class="head-title">HD Videolar</h1>
-    <form id="form">
-        <input type="search" id="input-search" class="input-seach" placeholder="Matin kiriting" autocomplete="off">
-        <button type="submit" class="btn-search">Qidirish</button>
-    </form>
-    <select id="select">
-        <option value="all">Hammasi</option>
-        <option value="backgrounds">Orqa fonlar</option>
-        <option value="fashion">Moda</option>
-        <option value="science">Fan</option>
-        <option value="health">Sog'liq</option>
-        <option value="religion">Din</option>
-        <option value="transportation">Transport</option>
-        <option value="buildings">Binolar</option>
-        <option value="industry">Sanoat</option>
-        <option value="feelings">His-tuyg'ular</option>
-        <option value="places">Joylar</option>
-        <option value="nature">Tabiat</option>
-        <option value="education">Talim</option>
-        <option value="computer">Kompyter</option>
-        <option value="food">Ovqat</option>
-        <option value="sports">Sport turlari</option>
-        <option value="travel">Sayohat</option>
-        <option value="business">Biznes</option>
-        <option value="music">Musiqa</option>
-        <option value="animals">Hayvonot</option>
-        <option value="people">Insonlar</option>
-    </select>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="head-title">HD видео</h1>
+            <form id="form">
+                <input type="search" id="input-search" class="input-seach" placeholder="Поиск видео" autocomplete="off">
+                <button type="submit"  class="btn-search">Поиск</button>
+            </form>
+            <select id="select">
+            <option value="all">Все</option>
+            <option value="backgrounds">фоны</option>
+            <option value="fashion">мода</option>
+            <option value="science">наука</option>
+            <option value="health">здоровье</option>
+            <option value="religion">религия</option>
+            <option value="transportation">транспорт</option>
+            <option value="buildings">здания</option>
+            <option value="industry">промышленность</option>
+            <option value="feelings">чувства</option>
+            <option value="places">места</option>
+            <option value="nature">природа</option>
+            <option value="education">образование</option>
+            <option value="computer">компьютер</option>
+            <option value="food">еда</option>
+            <option value="sports">спорт</option>
+            <option value="travel">путешествия</option>
+            <option value="business">бизнес</option>
+            <option value="music">музыка</option>
+            <option value="animals">животные</option>
+            <option value="people">люди</option>
+            </select>
+        </div>
+        <ul class="list"></ul>
+        <template id="template">
+            <li class="list-item">
+                <video class="video-pleyer" src="" id="add-data" controls>
+                    <source src="" type="video/mp4"> 
+                </video>
+                <div class="info-video">
+                    <p class="video-tag"></p>
+                </div>
+            </li>
+        </template>
+        <div class="btn-block">
+            <button id="btn-prev">←</button>
+        <button id="btn-next">→</button>
+        </div>
     </div>
-    <ul class="list"></ul>
-    <template id="template">
-        <li class="list-item">
-            <video class="video-pleyer" src="" id="add-data" controls>
-                <source src="" type="video/mp4"> 
-            </video>
-            <div class="info-video">
-                <p class="video-tag"></p>
-            </div>
-        </li>
-    </template>
 
    <script src="./index.js"></script> 
 </body>
