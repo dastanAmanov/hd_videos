@@ -46,12 +46,10 @@ fetchdata()
 
 btnPrev.addEventListener('click', ()=>{
     pageCount--
-    console.log(pageCount);
     fetchdata()
 })
 btnNext.addEventListener('click', ()=>{
     pageCount++
-    console.log(pageCount);
     fetchdata()
 })
 
