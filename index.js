@@ -9,6 +9,7 @@ let KEY = "23037258-af0f917717571caabf69b3a7f"
 let pageCount = 1
 
 renderVideos = (dataApi)=>{
+    list.innerHTML = null;
     dataApi.forEach(elem => {
         let {tags, videos:{tiny:{url}}} = elem
 
@@ -27,7 +28,7 @@ renderVideos = (dataApi)=>{
 }
 
 async function fetchdata(){
-    list.innerHTML = null;
+    list.innerHTML = '<div class="lds-facebook"><div></div><div></div><div></div>'
     const response = await fetch(`https://pixabay.com/api/videos/?key=${KEY}&lang=ru&q=${elInput.value}&category=${select.value}&page=${pageCount}`); //<--- endpoint
     const data = await response.json();
     let total = Math.ceil(data.totalHits / 50)
